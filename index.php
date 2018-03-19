@@ -1,3 +1,5 @@
+<!--eCommerce demonstration project-->
+
 <!DOCTYPE html>
 <html lang="en">
 
