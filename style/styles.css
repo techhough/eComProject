@@ -1,0 +1,121 @@
+* { /*all elements */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*The width and height properties (and min/max properties) includes content, padding and border */
+  font-family: helvetica;
+}
+
+.menu-container {
+  color: #fff; /*Font color */
+  background-color: #5995DA; /*Container background color */
+  padding: 20px 0; /*20 = top and bottom, 0 = left and right*/
+  display: flex; /*turns menu-container into a flex container*/
+  justify-content: center; /*defines horizontal alightment of flex items*/
+}
+
+.menu {
+  /*border: 1px solid #fff; ugly border for debugging*/
+  width: 900px;
+  display: flex; /*turns menu into a nested flex container*/
+  justify-content: space-between; /*distributes items across container with equal space between*/
+}
+
+/*for aligning signup/login to right if using extra div instead of auto-margin
+.links {
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: flex-end;
+}
+*/
+
+.login {
+  margin-left: 20px; /*puts space to the left of Login*/
+}
+
+.signup {
+  margin-left: auto; /*auto margins eat up all the extra space. Moves sign up and login to right side of container */
+}
+
+.header-container {
+  color: #5995DA;
+  background-color: #D6E9FE;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  width: 900px;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /*cross-axis alignment to vertically center content*/
+}
+
+/*aligns social and subscribe links to bottom of header container*/
+.social,
+.subscribe {
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+
+.photo-grid-container {
+  display: flex;
+  justify-content: center;
+}
+
+.photo-grid {
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /*forces extra items to wrap to size of grid container*/
+  flex-direction: row;
+  align-items: center;
+}
+
+.first-item {
+  order: 1;
+}
+
+.last-item {
+  order: -1;
+}
+
+.photo-grid-item {
+  border: 1px solid #fff;
+  width: 300px;
+  height: 300px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-item {
+  border: 1px solid #fff;
+  background-color: #D6E9FE;
+  height: 200px;
+  flex: 1; /*tells the items to stretch to match the width of .footer*/
+}
+
+.footer-three {
+  flex: 2; /*tells the third item to grow twice as fast as the other two*/
+}
+
+.footer-one,
+.footer-three {
+  background-color: #5995DA;
+  flex: initial; /*ignores flex 1 from footer-item parent*/
+  width: 300px; /*footer items one and three have a static size*/
+}
+
+/*
+    Use display: flex; to create a flex container.
+    Use justify-content to define the horizontal alignment of items.
+    Use align-items to define the vertical alignment of items.
+    Use flex-direction if you need columns instead of rows.
+    Use the row-reverse or column-reverse values to flip item order.
+    Use order to customize the order of individual elements.
+    Use align-self to vertically align individual items.
+    Use flex to create flexible boxes that can stretch and shrink.
+*/
